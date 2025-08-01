@@ -1,0 +1,10 @@
+[Unit]
+Description=Fix ATA DMA
+
+[Service]
+Restart=no
+Type=oneshot
+ExecStart=/usr/sbin/atafix.sh
+
+# This goes in /etc/systemd/system/atafix.service
+# Enable: systemctl enable atafix.service
